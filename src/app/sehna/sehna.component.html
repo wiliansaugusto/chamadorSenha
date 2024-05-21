@@ -1,0 +1,19 @@
+<div class="container corpo">
+    <div *ngIf="flagAlert" class="alert alert-success info" role="alert">
+        <p class="alert-heading">Muito bem!</p>
+        <p class="mb-0">Senha <strong>{{valor.senha}}</strong> enviada com sucesso!</p>
+    </div>
+    <div  *ngIf="flagAlert == false" class="">
+        <h2 class="text-center">Informe a Senha</h2>
+        <form [formGroup]="myForm">
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input autofocus class="form-control" type="text" id="senha" formControlName="senha" name="senha"
+                    placeholder="informe a senha que deseja chamar">
+            </div><br>
+            <button class="btn btn-lg btn-success" type="submit" (click)="onSubmit()">Submit</button>
+    
+        </form>
+    </div>
+
+</div>

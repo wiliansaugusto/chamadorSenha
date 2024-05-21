@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'chamadordeSenhaAngular';
+  constructor(private cookieService: CookieService) { }
+
+  setCookieWithSameSiteNone() {
+    // Define o cookie com SameSite=None e Secure
+    this.cookieService.set('cookieName', 'cookieValue', { sameSite: 'None', secure: true });
+  }
 }

@@ -1,0 +1,35 @@
+.corpo {
+    padding: 25px;
+    min-height: 80vh;
+}
+
+.blocoPrincipal {
+    background-color: black;
+    color: rgb(247, 169, 67);
+    width: 50%;
+    min-height: 40vh;
+    margin-left: 25%;
+    word-wrap: break-word;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.senhaAtiva {
+    font-size: 10vw;
+    text-align: justify;
+
+}
+
+.segundalinha {
+    margin-top: 25px;
+
+}
+
+.blocoSenha {
+    text-align: center;
+    font-size: 8vw;
+}

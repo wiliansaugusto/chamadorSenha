@@ -1,0 +1,33 @@
+<div class="corpo">
+    <div class="container">
+        <div *ngIf="flagAviso" class="alert alert-success" role="alert">
+            <h1 class="alert-heading">Seu Pedido está pronto!!</h1>
+            <p class="mb-0">Borá aproveitar o pedido nº {{pedido}}</p>
+            <button class="btn btn-lg btn-success" (click)="voltar()">Fechar</button>
+        </div>
+    </div>
+    <div class="container" *ngIf="!flagform">
+        <h2>Olá informe o número do seu pedido</h2>
+        <form [formGroup]="myForm">
+            <div class="form-group">
+                <label for="pedido">Numero do seu Pedido</label>
+                <input class="form-control" type="text" id="pedido" formControlName="pedido" name="senha"
+                    placeholder="informe o numero do seu pedido">
+            </div><br>
+            <button class="btn btn-lg btn-success" (click)="verificarPedido()">Salvar</button>
+
+        </form>
+    </div>
+    <div class="container principal" *ngIf="flagAlert">
+        <figure class="img-thumbnail">
+            <img src="../../assets/grill-steak.gif" alt="carregando" class="img-fluid ">
+            <figcaption>
+                <p>Por favor aguarde estamos preparando o seu pedido </p>
+            </figcaption>
+        </figure>
+        <button class="btn btn-lg btn-primary btnPrincipal" type="button" (click)="voltar()">Voltar</button>
+
+    </div>
+</div>
+
+<button (click)="playSound()" hidden>Reproduzir Áudio</button>
